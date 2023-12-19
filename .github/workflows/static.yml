@@ -33,7 +33,7 @@ jobs:
             - name: set-env
               run: |
                   echo "GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}" >> $GITHUB_ENV
-                  echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_ENV
+                  echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_ENV
             - name: Checkout
               uses: actions/checkout@v3
             - name: build
